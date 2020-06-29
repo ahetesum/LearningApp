@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>recipes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let recipie of recipes" [routerLink]="['./',recipie.id]">
+      <ion-avatar>
+        <ion-img [src]="recipie.imageUrl"></ion-img>
+      </ion-avatar>
+      <ion-label>{{recipie.title}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
